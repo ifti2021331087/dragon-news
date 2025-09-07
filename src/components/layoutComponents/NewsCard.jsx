@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const NewsCard = ({ news }) => {
   // Fallback for news object properties
@@ -51,7 +52,7 @@ const NewsCard = ({ news }) => {
           <span className="text-sm text-gray-500">{totalView} views</span>
         </div>
         <div className="card-actions justify-end mt-4">
-          <button className="btn btn-link text-orange-500 btn-sm">Read More</button>
+          <Link to={`/news/${news._id}`} className="btn btn-link text-orange-500 btn-sm">Read More</Link>
         </div>
       </div>
     </div>
